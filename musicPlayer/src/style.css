@@ -1,0 +1,131 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+*::-webkit-scrollbar{
+  display: none;
+}
+/* ---------------------------------顶部栏--------------------------------- */
+.topbar{
+  position: fixed;
+  /* background-color: rgb(0, 149, 255); */
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  padding: 8px 10px;
+  box-sizing: border-box;
+  /* 拖动 */
+  -webkit-app-region: drag;
+  z-index: 999;
+  pointer-events: all;
+}
+.top-item{
+  display: flex;
+  align-items: center;
+}
+.icon{
+  fill: rgb(255, 255, 255);
+  -webkit-app-region: no-drag;
+  padding: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+.icon:hover{
+  fill: #ffa8a8 !important;
+  border-color: #fff!important;
+}
+.isOpen{
+  fill: rgb(2, 187, 79)!important;
+}
+.samllbar .icon{
+  padding: 4px;
+}
+/* ---------------------------------提示--------------------------------- */
+.tip{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+.tip .message_box{
+  width: 80%;
+  height: 150px;
+  background-color: rgba(80,80,80,0.9);
+  border-radius: 8px;
+  transition: all 2s;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: -800px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  animation: go 2s linear;
+}
+.tip .message_box .header{
+  color: rgb(2, 187, 79);
+  text-align: center;
+  padding-top: 12px;
+  user-select: none;
+  font-size: 18px;
+}
+.tip .message_box .body{
+  display: flex;
+  align-items: center;
+  color: #fff;
+  justify-content: center;
+  flex: 1;
+  user-select: none;
+}
+.tip .message_box .body .icon{
+  cursor: auto;
+  padding: 4px 2px 0 0;
+}
+.tip .message_box .btns{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tip .message_box .btns .ln_btn{
+  padding: 8px;
+  border-top: 1px solid rgb(115, 115, 115);
+  border-right: 1px solid rgb(115, 115, 115);
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+.tip .message_box .btns .cancel{
+  color: rgba(136, 136, 136, 0.9);
+}
+.tip .message_box .btns .cancel:hover{
+  color: #fff;
+}
+.tip .message_box .btns .confirm{
+  border-right: none!important;
+  color: rgb(2, 187, 79);
+}
+.tip .message_box .btns .confirm:hover{
+  color: rgb(0, 255, 106);
+}
+.ln_input{
+  padding: 8px;
+  margin: 8px;
+  border-radius: 8px;
+  border: 1px solid rgba(244, 244, 244, 0.772);
+  outline: none;
+  background-color: rgba(69, 69, 69, 0.1);
+  color: #fff;
+  width: 80%;
+  box-sizing: content-box;
+}

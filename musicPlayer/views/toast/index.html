@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="no-referrer" />
+    <title>提示</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="toast"></div>
+</body>
+<script>
+    document.querySelector('#toast').innerHTML=getQueryString('content');
+    document.querySelector('#toast').style.color=getQueryString('color');
+    function getQueryString(name) {
+        const url = new URL(window.location.href);
+        return url.searchParams.get(name);
+    }
+</script>
+</html>

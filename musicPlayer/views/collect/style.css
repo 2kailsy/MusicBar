@@ -1,0 +1,56 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.music_item{
+    display: flex;
+    align-items: center;
+}
+.music-pic{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: rgb(158, 158, 158);
+    overflow: hidden;
+    margin: 12px;
+    user-select: none;
+}
+.music-pic img{
+    width: 100%;
+    height: 100%;
+}
+.music-info{
+    flex: 1;
+}
+.music-name{
+    color: rgb(2, 187, 79);
+    font-size: 18px;
+    font-weight: 540;
+    user-select: none;
+}
+.music-artist{
+    color: rgb(211, 211, 211);
+    font-size: 12px;
+    font-weight: 500;
+    user-select: none;
+}
+.music-func{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    -webkit-app-region: no-drag;
+    display: flex;
+    align-items: center;
+}
+.delete{
+    border: 1px solid rgba(255, 255, 255, 0.67);
+    border-radius: 50%;
+    padding: 3px!important;
+    margin: 8px 2px;
+}
